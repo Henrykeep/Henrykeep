@@ -2,8 +2,8 @@ name: Generate Monochrome Snake Animation
 
 on:
   schedule:
-    # 每天自动更新一次（UTC 时间 00:00）
-    - cron: "0 0 * * *"
+    # 每 1 小时自动更新一次
+    - cron: "0 * * * *"
   workflow_dispatch:
   push:
     branches:
