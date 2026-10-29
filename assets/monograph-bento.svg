@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1364" width="100%">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1354" width="100%">
   <defs>
     <!-- Pure Monochrome Obsidian Surface -->
     <linearGradient id="surface" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -123,9 +123,9 @@
   </g>
 
   <!-- ================================================================================== -->
-  <!-- ROW 2: OVERVIEW DUAL BENTO CARDS (y = 322, height = 310, gap = 32)                 -->
+  <!-- ROW 2: OVERVIEW DUAL BENTO CARDS (y = 328, height = 310, gap = 38)                 -->
   <!-- ================================================================================== -->
-  <g transform="translate(0, 322)">
+  <g transform="translate(0, 328)">
     <!-- Left Card (width = 586) -->
     <g transform="translate(0, 0)">
       <rect width="586" height="310" rx="16" fill="url(#cardGrad)" stroke="#262626" stroke-width="1"/>
@@ -207,9 +207,9 @@
   </g>
 
   <!-- ================================================================================== -->
-  <!-- ROW 3: SELECTED REPOSITORIES & TECH INDEX (y = 664, height = 420, gap = 32)        -->
+  <!-- ROW 3: SELECTED REPOSITORIES & TECH INDEX (y = 676, height = 420, gap = 38)        -->
   <!-- ================================================================================== -->
-  <g transform="translate(0, 664)">
+  <g transform="translate(0, 676)">
     <rect width="1200" height="420" rx="16" fill="url(#cardGrad)" stroke="#262626" stroke-width="1"/>
     <line x1="100" y1="1" x2="1100" y2="1" stroke="url(#topEdge)" stroke-width="1.2"/>
 
@@ -279,9 +279,9 @@
   </g>
 
   <!-- ================================================================================== -->
-  <!-- ROW 4: TELEMETRY & LANGUAGE DISTRIBUTION (y = 1116, height = 220, gap = 32)        -->
+  <!-- ROW 4: TELEMETRY & LANGUAGE DISTRIBUTION (y = 1134, height = 220, gap = 38)        -->
   <!-- ================================================================================== -->
-  <g transform="translate(0, 1116)">
+  <g transform="translate(0, 1134)">
     <!-- Left Card (width = 586) -->
     <g transform="translate(0, 0)">
       <rect width="586" height="220" rx="16" fill="url(#cardGrad)" stroke="#262626" stroke-width="1"/>
