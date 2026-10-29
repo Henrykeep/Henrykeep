@@ -26,6 +26,11 @@ jobs:
             dist/github-contribution-grid-snake.svg?color_snake=#18181b&color_dots=#f4f4f5,#d4d4d8,#a1a1aa,#52525b,#18181b
             dist/github-contribution-grid-snake-dark.svg?color_snake=#ffffff&color_dots=#17171a,#2e2e33,#52525b,#a1a1aa,#fafafa
 
+      - name: Trim excess top/bottom/side whitespace from Snake SVGs
+        run: |
+          sed -i 's/viewBox="-16 -32 880 192" width="880" height="192"/viewBox="0 -8 848 122" width="100%"/g' dist/*.svg
+          sed -i 's/<rect class="u"[^>]*>//g' dist/*.svg
+
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
         with:
