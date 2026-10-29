@@ -17,18 +17,8 @@
 
 <br/><br/>
 
-<!-- ==================== 04. 极简纯银定制 GitHub 实时数据看板 ==================== -->
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api?username=Henrykeep&show_icons=true&hide_border=true&bg_color=0a0a0c&title_color=ffffff&text_color=a3a3a3&icon_color=e4e4e7&ring_color=ffffff" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api?username=Henrykeep&show_icons=true&hide_border=true&bg_color=fafafa&title_color=18181b&text_color=52525b&icon_color=18181b&ring_color=18181b" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=Henrykeep&show_icons=true&hide_border=true&bg_color=0a0a0c&title_color=ffffff&text_color=a3a3a3&icon_color=e4e4e7&ring_color=ffffff" alt="Henrykeep GitHub Stats" />
-</picture>
-&nbsp;&nbsp;
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Henrykeep&layout=compact&langs_count=6&hide_border=true&bg_color=0a0a0c&title_color=ffffff&text_color=a3a3a3" />
-  <source media="(prefers-color-scheme: light)" srcset="https://github-readme-stats.vercel.app/api/top-langs/?username=Henrykeep&layout=compact&langs_count=6&hide_border=true&bg_color=fafafa&title_color=18181b&text_color=52525b" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Henrykeep&layout=compact&langs_count=6&hide_border=true&bg_color=0a0a0c&title_color=ffffff&text_color=a3a3a3" alt="Henrykeep Top Languages" />
-</picture>
+<!-- ==================== 04. 极简纯银定制 Bento 数据与语言分布看板 (零外链裂图) ==================== -->
+<img src="./assets/bento-telemetry.svg" width="100%" alt="Henrykeep Telemetry & Language Spectrum" />
 
 <br/><br/>
 

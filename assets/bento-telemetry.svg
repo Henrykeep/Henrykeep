@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 220" width="100%" height="100%">
+  <defs>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#121214"/>
+      <stop offset="100%" stop-color="#08080a"/>
+    </linearGradient>
+    <linearGradient id="topEdge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <style>
+    .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .mono { font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace; }
+    .serif { font-family: 'Instrument Serif', Georgia, serif; font-style: italic; }
+  </style>
+
+  <!-- ==================== LEFT CARD: GITHUB TELEMETRY (Width: 585) ==================== -->
+  <g transform="translate(0, 0)">
+    <rect width="585" height="220" rx="16" fill="url(#cardGrad)" stroke="#262626" stroke-width="1"/>
+    <line x1="60" y1="1" x2="525" y2="1" stroke="url(#topEdge)" stroke-width="1.2"/>
+
+    <text x="34" y="38" fill="#a3a3a3" font-size="11" class="mono" letter-spacing="1.4">03 // GITHUB TELEMETRY</text>
+    <text x="551" y="38" text-anchor="end" fill="#525252" font-size="10.5" class="mono">@HENRYKEEP</text>
+
+    <!-- 2x2 Telemetry Metric Boxes -->
+    <g transform="translate(34, 58)">
+      <!-- Metric 1 -->
+      <rect x="0" y="0" width="185" height="62" rx="8" fill="#161619" stroke="#262626" stroke-width="0.8"/>
+      <text x="16" y="23" fill="#737373" font-size="10" class="mono" letter-spacing="0.8">REPOSITORIES</text>
+      <text x="16" y="47" fill="#ffffff" font-size="20" font-weight="600" class="sans">33 <tspan fill="#737373" font-size="11" font-weight="400" class="mono">PUBLIC</tspan></text>
+
+      <!-- Metric 2 -->
+      <rect x="198" y="0" width="185" height="62" rx="8" fill="#161619" stroke="#262626" stroke-width="0.8"/>
+      <text x="214" y="23" fill="#737373" font-size="10" class="mono" letter-spacing="0.8">PRIMARY FOCUS</text>
+      <text x="214" y="46" fill="#e4e4e7" font-size="14" font-weight="600" class="sans">AI &amp; Native Mobile</text>
+
+      <!-- Metric 3 -->
+      <rect x="0" y="74" width="185" height="62" rx="8" fill="#161619" stroke="#262626" stroke-width="0.8"/>
+      <text x="16" y="97" fill="#737373" font-size="10" class="mono" letter-spacing="0.8">ARCHITECTURE</text>
+      <text x="16" y="120" fill="#e4e4e7" font-size="14" font-weight="600" class="sans">Full-Stack · MCU</text>
+
+      <!-- Metric 4 -->
+      <rect x="198" y="74" width="185" height="62" rx="8" fill="#161619" stroke="#262626" stroke-width="0.8"/>
+      <text x="214" y="97" fill="#737373" font-size="10" class="mono" letter-spacing="0.8">COMMIT CADENCE</text>
+      <text x="214" y="120" fill="#ffffff" font-size="14" font-weight="600" class="mono">ACTIVE // 2026</text>
+    </g>
+
+    <!-- Right Circular Monochrome Rank Ring -->
+    <g transform="translate(490, 126)">
+      <circle cx="0" cy="0" r="48" fill="none" stroke="#1f1f23" stroke-width="5"/>
+      <circle cx="0" cy="0" r="48" fill="none" stroke="#ffffff" stroke-width="5" stroke-dasharray="265 302" stroke-linecap="round" transform="rotate(-90)"/>
+      <text x="0" y="-2" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="600" class="serif">S+</text>
+      <text x="0" y="16" text-anchor="middle" fill="#737373" font-size="9.5" class="mono" letter-spacing="1">INDEX</text>
+    </g>
+  </g>
+
+  <!-- ==================== RIGHT CARD: LANGUAGE DISTRIBUTION (Width: 595) ==================== -->
+  <g transform="translate(605, 0)">
+    <rect width="595" height="220" rx="16" fill="url(#cardGrad)" stroke="#262626" stroke-width="1"/>
+    <line x1="60" y1="1" x2="535" y2="1" stroke="url(#topEdge)" stroke-width="1.2"/>
+
+    <text x="34" y="38" fill="#a3a3a3" font-size="11" class="mono" letter-spacing="1.4">04 // LANGUAGE TELEMETRY &amp; DISTRIBUTION</text>
+    <text x="561" y="38" text-anchor="end" fill="#525252" font-size="10.5" class="mono">MONOCHROME SPECTRUM</text>
+
+    <!-- Segmented Monochrome Progress Bar -->
+    <g transform="translate(34, 58)">
+      <rect x="0" y="0" width="195" height="10" rx="3" fill="#ffffff"/>
+      <rect x="199" y="0" width="145" height="10" rx="3" fill="#a1a1aa"/>
+      <rect x="348" y="0" width="110" height="10" rx="3" fill="#52525b"/>
+      <rect x="462" y="0" width="65" height="10" rx="3" fill="#27272a"/>
+    </g>
+
+    <!-- Language Breakdown Rows -->
+    <g transform="translate(34, 92)">
+      <!-- Row 1: Python & AI -->
+      <rect x="0" y="0" width="252" height="46" rx="8" fill="#161619" stroke="#262626" stroke-width="0.8"/>
+      <circle cx="18" cy="23" r="4.5" fill="#ffffff"/>
+      <text x="32" y="20" fill="#ffffff" font-size="12.5" font-weight="600" class="sans">Python</text>
+      <text x="32" y="36" fill="#737373" font-size="10.5" class="mono">AI Agents · FastAPI</text>
+      <text x="236" y="27" text-anchor="end" fill="#e4e4e7" font-size="12" font-weight="600" class="mono">37.2%</text>
+
+      <!-- Row 2: Java / Kotlin -->
+      <rect x="275" y="0" width="252" height="46" rx="8" fill="#161619" stroke="#262626" stroke-width="0.8"/>
+      <circle cx="293" cy="23" r="4.5" fill="#a1a1aa"/>
+      <text x="307" y="20" fill="#ffffff" font-size="12.5" font-weight="600" class="sans">Java / Kotlin</text>
+      <text x="307" y="36" fill="#737373" font-size="10.5" class="mono">Android · Widgets</text>
+      <text x="511" y="27" text-anchor="end" fill="#e4e4e7" font-size="12" font-weight="600" class="mono">27.8%</text>
+
+      <!-- Row 3: TypeScript -->
+      <rect x="0" y="58" width="252" height="46" rx="8" fill="#161619" stroke="#262626" stroke-width="0.8"/>
+      <circle cx="18" cy="81" r="4.5" fill="#52525b"/>
+      <text x="32" y="78" fill="#ffffff" font-size="12.5" font-weight="600" class="sans">TypeScript</text>
+      <text x="32" y="94" fill="#737373" font-size="10.5" class="mono">Web · Next.js · CLI</text>
+      <text x="236" y="85" text-anchor="end" fill="#e4e4e7" font-size="12" font-weight="600" class="mono">21.5%</text>
+
+      <!-- Row 4: C / C++ & Embedded -->
+      <rect x="275" y="58" width="252" height="46" rx="8" fill="#161619" stroke="#262626" stroke-width="0.8"/>
+      <circle cx="293" cy="81" r="4.5" fill="#27272a" stroke="#737373" stroke-width="1"/>
+      <text x="307" y="78" fill="#ffffff" font-size="12.5" font-weight="600" class="sans">C / C++ &amp; Shell</text>
+      <text x="307" y="94" fill="#737373" font-size="10.5" class="mono">Embedded · Linux</text>
+      <text x="511" y="85" text-anchor="end" fill="#e4e4e7" font-size="12" font-weight="600" class="mono">13.5%</text>
+    </g>
+  </g>
+</svg>
