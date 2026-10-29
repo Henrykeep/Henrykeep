@@ -26,10 +26,44 @@ jobs:
             dist/github-contribution-grid-snake.svg?color_snake=#18181b&color_dots=#f4f4f5,#d4d4d8,#a1a1aa,#52525b,#18181b
             dist/github-contribution-grid-snake-dark.svg?color_snake=#ffffff&color_dots=#17171a,#2e2e33,#52525b,#a1a1aa,#fafafa
 
-      - name: Trim excess top/bottom/side whitespace from Snake SVGs
+      - name: Wrap Snake SVGs in Bento Card Frame & Trim Padding
         run: |
-          sed -i 's/viewBox="-16 -32 880 192" width="880" height="192"/viewBox="0 -8 848 122" width="100%"/g' dist/*.svg
-          sed -i 's/<rect class="u"[^>]*>//g' dist/*.svg
+          python3 - << 'EOF'
+          import glob, re
+
+          for path in glob.glob("dist/*.svg"):
+              with open(path, "r", encoding="utf-8") as f:
+                  svg = f.read()
+
+              is_dark = "dark" in path
+              bg = "#0c0c0e" if is_dark else "#fafafa"
+              border = "#262626" if is_dark else "#e4e4e7"
+              title_color = "#a3a3a3" if is_dark else "#52525b"
+              sub_color = "#525252" if is_dark else "#a1a1aa"
+
+              # Replace viewBox to tightly fit the Bento Card frame around the 848x112 grid
+              svg = re.sub(
+                  r'viewBox="[^"]*"\s+width="[^"]*"\s+height="[^"]*"',
+                  'viewBox="-24 -48 896 176" width="100%"',
+                  svg
+              )
+
+              # Remove bottom progress bar elements (class="u")
+              svg = re.sub(r'<rect[^>]*class="u"[^>]*/>', '', svg)
+              svg = re.sub(r'<rect[^>]*class="u"[^>]*></rect>', '', svg)
+
+              bento_frame = (
+                  f'<rect x="-23.5" y="-47.5" width="895" height="175" rx="12" fill="{bg}" stroke="{border}" stroke-width="0.8"/>'
+                  f'<line x1="60" y1="-47.5" x2="836" y2="-47.5" stroke="#ffffff" stroke-opacity="0.24" stroke-width="0.9"/>'
+                  f'<text x="-4" y="-25" fill="{title_color}" font-size="8.2" font-family="JetBrains Mono, SFMono-Regular, Consolas, monospace" letter-spacing="1.1">05 // CONTRIBUTION TELEMETRY &amp; ACTIVITY MATRIX</text>'
+                  f'<text x="852" y="-25" text-anchor="end" fill="{sub_color}" font-size="7.8" font-family="JetBrains Mono, SFMono-Regular, Consolas, monospace" letter-spacing="0.8">HOURLY AUTOMATED SYNC</text>'
+              )
+
+              svg = svg.replace("</style>", "</style>" + bento_frame, 1)
+
+              with open(path, "w", encoding="utf-8") as f:
+                  f.write(svg)
+          EOF
 
       - name: Push to output branch
         uses: crazy-max/ghaction-github-pages@v3.1.0
