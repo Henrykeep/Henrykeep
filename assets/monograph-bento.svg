@@ -1,0 +1,361 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1288" width="100%">
+  <defs>
+    <!-- Pure Monochrome Obsidian Surface -->
+    <linearGradient id="surface" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#121214"/>
+      <stop offset="50%" stop-color="#0a0a0c"/>
+      <stop offset="100%" stop-color="#050505"/>
+    </linearGradient>
+
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#121214"/>
+      <stop offset="100%" stop-color="#08080a"/>
+    </linearGradient>
+
+    <linearGradient id="subCard" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#17171a"/>
+      <stop offset="100%" stop-color="#111113"/>
+    </linearGradient>
+
+    <!-- Pure Silver Ambient Top Spotlight -->
+    <radialGradient id="silverGlow" cx="50%" cy="0%" r="65%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#e4e4e7" stop-opacity="0.02"/>
+      <stop offset="100%" stop-color="#000000" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Brushed Platinum & Pure Silver Text Gradient -->
+    <linearGradient id="silverText" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="55%" stop-color="#f4f4f5"/>
+      <stop offset="100%" stop-color="#a1a1aa"/>
+    </linearGradient>
+
+    <!-- Top Specular Hairline Highlight -->
+    <linearGradient id="specularEdge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="30%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.55"/>
+      <stop offset="70%" stop-color="#ffffff" stop-opacity="0.22"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <linearGradient id="topEdge" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#ffffff" stop-opacity="0.32"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+
+    <!-- Vercel Geist Architectural Grid -->
+    <pattern id="archGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#ffffff" stroke-width="0.6" stroke-opacity="0.035"/>
+    </pattern>
+  </defs>
+
+  <style>
+    .sans { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; }
+    .mono { font-family: 'JetBrains Mono', 'SFMono-Regular', Consolas, monospace; }
+    .serif { font-family: 'Instrument Serif', 'Playfair Display', Georgia, serif; font-style: italic; font-weight: 400; }
+    @keyframes breathe {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0; }
+    }
+    .pulse { animation: breathe 3s ease-in-out infinite; }
+    .cursor { animation: blink 1.1s step-end infinite; }
+  </style>
+
+  <!-- ================================================================================== -->
+  <!-- ROW 1: HERO MONOGRAPH CARD (y = 0, height = 290)                                   -->
+  <!-- ================================================================================== -->
+  <g transform="translate(0, 0)">
+    <rect width="1200" height="290" rx="16" fill="url(#surface)" stroke="#262626" stroke-width="1"/>
+    <rect width="1200" height="290" rx="16" fill="url(#archGrid)"/>
+    <rect width="1200" height="290" rx="16" fill="url(#silverGlow)"/>
+    <line x1="100" y1="1" x2="1100" y2="1" stroke="url(#specularEdge)" stroke-width="1.2"/>
+
+    <!-- Architectural Crosshairs (+) -->
+    <g stroke="#525252" stroke-width="1" opacity="0.55">
+      <path d="M 56 60 L 64 60 M 60 56 L 60 64"/>
+      <path d="M 1136 60 L 1144 60 M 1140 56 L 1140 64"/>
+      <path d="M 56 230 L 64 230 M 60 226 L 60 234"/>
+      <path d="M 1136 230 L 1144 230 M 1140 226 L 1140 234"/>
+    </g>
+
+    <!-- Top Editorial Metadata Row -->
+    <g transform="translate(80, 56)" class="mono" font-size="11" fill="#737373" letter-spacing="1.5">
+      <text x="0" y="0">MONOGRAPH // HENRYKEEP · LANMIN LI</text>
+      <g transform="translate(825, -15)">
+        <rect width="215" height="26" rx="13" fill="#17171a" stroke="#262626" stroke-width="1"/>
+        <circle class="pulse" cx="15" cy="13" r="3.5" fill="#ffffff"/>
+        <text x="28" y="16.5" fill="#d4d4d8" font-size="10.5" letter-spacing="0.6">BUILDING &amp; EXPLORING</text>
+      </g>
+    </g>
+
+    <!-- Main Editorial Heading -->
+    <g transform="translate(80, 130)">
+      <text x="0" y="0" fill="url(#silverText)" font-size="45" font-weight="600" class="sans" letter-spacing="-1.4">
+        Henrykeep <tspan fill="#404040" font-weight="300">/</tspan> <tspan class="serif" fill="#e4e4e7" font-size="48">Lanmin Li</tspan>
+      </text>
+      <text x="2" y="42" fill="#a3a3a3" font-size="16.5" font-weight="400" class="sans" letter-spacing="-0.1">
+        Engineering <tspan fill="#ffffff" font-weight="500">AI Agents &amp; LLM Gateways</tspan>, <tspan fill="#ffffff" font-weight="500">Native Android Systems</tspan>, and <tspan class="serif" fill="#ffffff" font-size="19">Embedded Intelligence</tspan>.
+      </text>
+    </g>
+
+    <line x1="80" y1="212" x2="1120" y2="212" stroke="#262626" stroke-width="0.8"/>
+
+    <!-- Bottom Swiss Grid Footer Spec Bar -->
+    <g transform="translate(80, 246)" class="mono" font-size="11">
+      <text x="0" y="0" fill="#525252">DISCIPLINE</text>
+      <text x="92" y="0" fill="#e4e4e7">AI Systems · Mobile · Embedded</text>
+
+      <text x="370" y="0" fill="#525252">CORE</text>
+      <text x="418" y="0" fill="#ffffff">Python · TypeScript · Java · C/C++</text>
+
+      <text x="720" y="0" fill="#525252">BASE</text>
+      <text x="768" y="0" fill="#e4e4e7">China (UTC+8)</text>
+
+      <text x="1040" y="0" text-anchor="end" fill="#525252">EDITION // 2026</text>
+    </g>
+  </g>
+
+  <!-- ================================================================================== -->
+  <!-- ROW 2: OVERVIEW DUAL BENTO CARDS (y = 304, height = 310, gap = 14)                 -->
+  <!-- ================================================================================== -->
+  <g transform="translate(0, 304)">
+    <!-- Left Card (width = 593) -->
+    <g transform="translate(0, 0)">
+      <rect width="593" height="310" rx="16" fill="url(#cardGrad)" stroke="#262626" stroke-width="1"/>
+      <line x1="60" y1="1" x2="533" y2="1" stroke="url(#topEdge)" stroke-width="1.2"/>
+
+      <text x="34" y="40" fill="#a3a3a3" font-size="11" class="mono" letter-spacing="1.4">01 // ENGINEERING FOCUS</text>
+      <text x="34" y="72" fill="#ffffff" font-size="21" font-weight="600" class="sans" letter-spacing="-0.4">
+        Less noise. More <tspan class="serif" fill="#e4e4e7" font-size="24">structural elegance</tspan>.
+      </text>
+      <text x="34" y="98" fill="#8a8a8e" font-size="13" class="sans">
+        Bridging frontier LLM workflows, native mobile telemetry, and low-level
+      </text>
+      <text x="34" y="117" fill="#8a8a8e" font-size="13" class="sans">
+        hardware execution into cohesive, resilient tools.
+      </text>
+
+      <g transform="translate(34, 142)">
+        <rect x="0" y="0" width="525" height="42" rx="8" fill="#17171a" stroke="#262626" stroke-width="0.8"/>
+        <text x="16" y="25" fill="#a3a3a3" font-size="11.5" class="mono">I.</text>
+        <text x="44" y="25" fill="#ffffff" font-size="13" font-weight="500" class="sans">AI Agents, CLI Tooling &amp; API Gateways</text>
+        <text x="508" y="25" text-anchor="end" fill="#525252" font-size="11" class="mono">Claude · OpenAI · Proxy</text>
+
+        <rect x="0" y="50" width="525" height="42" rx="8" fill="#17171a" stroke="#262626" stroke-width="0.8"/>
+        <text x="16" y="75" fill="#a3a3a3" font-size="11.5" class="mono">II.</text>
+        <text x="44" y="75" fill="#ffffff" font-size="13" font-weight="500" class="sans">Native Android &amp; Mobile GUI Agents</text>
+        <text x="508" y="75" text-anchor="end" fill="#525252" font-size="11" class="mono">Java · Kotlin · Widgets</text>
+
+        <rect x="0" y="100" width="525" height="42" rx="8" fill="#17171a" stroke="#262626" stroke-width="0.8"/>
+        <text x="16" y="125" fill="#a3a3a3" font-size="11.5" class="mono">III.</text>
+        <text x="44" y="125" fill="#ffffff" font-size="13" font-weight="500" class="sans">Embedded Systems &amp; Full-Stack Web</text>
+        <text x="508" y="125" text-anchor="end" fill="#525252" font-size="11" class="mono">C/C++ · TypeScript · MCU</text>
+      </g>
+    </g>
+
+    <!-- Right Card (x = 607, width = 593) -->
+    <g transform="translate(607, 0)">
+      <rect width="593" height="310" rx="16" fill="url(#cardGrad)" stroke="#262626" stroke-width="1"/>
+      <line x1="60" y1="1" x2="533" y2="1" stroke="url(#topEdge)" stroke-width="1.2"/>
+
+      <line x1="0" y1="42" x2="593" y2="42" stroke="#262626" stroke-width="0.8"/>
+      <circle cx="24" cy="21" r="4.5" fill="#3f3f46"/>
+      <circle cx="40" cy="21" r="4.5" fill="#3f3f46"/>
+      <circle cx="56" cy="21" r="4.5" fill="#3f3f46"/>
+      <text x="296" y="25" text-anchor="middle" fill="#737373" font-size="11.5" class="mono">~/henrykeep/manifest.ts</text>
+
+      <g transform="translate(28, 72)" class="mono" font-size="12.5">
+        <text x="0" y="0" fill="#404040">01</text>
+        <text x="32" y="0" fill="#737373">export const <tspan fill="#ffffff" font-weight="600">developer</tspan> = Object.freeze({</text>
+
+        <text x="0" y="24" fill="#404040">02</text>
+        <text x="52" y="24" fill="#737373">handle: <tspan fill="#e4e4e7">"Henrykeep"</tspan>,</text>
+
+        <text x="0" y="48" fill="#404040">03</text>
+        <text x="52" y="48" fill="#737373">name: <tspan fill="#e4e4e7">"Lanmin Li"</tspan>,</text>
+
+        <text x="0" y="72" fill="#404040">04</text>
+        <text x="52" y="72" fill="#737373">languages: [<tspan fill="#ffffff">"Python"</tspan>, <tspan fill="#ffffff">"Java"</tspan>, <tspan fill="#ffffff">"TypeScript"</tspan>, <tspan fill="#ffffff">"C/C++"</tspan>],</text>
+
+        <text x="0" y="96" fill="#404040">05</text>
+        <text x="52" y="96" fill="#737373">focus: [<tspan fill="#ffffff">"AI Agents"</tspan>, <tspan fill="#ffffff">"Android"</tspan>, <tspan fill="#ffffff">"Embedded"</tspan>],</text>
+
+        <text x="0" y="120" fill="#404040">06</text>
+        <text x="52" y="120" fill="#737373">principles: {</text>
+
+        <text x="0" y="144" fill="#404040">07</text>
+        <text x="72" y="144" fill="#737373">aesthetic: <tspan fill="#e4e4e7">"Monochrome &amp; Precision"</tspan>,</text>
+
+        <text x="0" y="168" fill="#404040">08</text>
+        <text x="72" y="168" fill="#737373">alwaysShipping: <tspan fill="#ffffff" font-weight="600">true</tspan>,</text>
+
+        <text x="0" y="192" fill="#404040">09</text>
+        <text x="52" y="192" fill="#737373">}</text>
+
+        <text x="0" y="216" fill="#404040">10</text>
+        <text x="32" y="216" fill="#737373">});</text>
+        <rect class="cursor" x="60" y="204" width="7" height="15" fill="#ffffff"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================================================================================== -->
+  <!-- ROW 3: SELECTED REPOSITORIES & TECH INDEX (y = 628, height = 420, gap = 14)        -->
+  <!-- ================================================================================== -->
+  <g transform="translate(0, 628)">
+    <rect width="1200" height="420" rx="16" fill="url(#cardGrad)" stroke="#262626" stroke-width="1"/>
+    <line x1="100" y1="1" x2="1100" y2="1" stroke="url(#topEdge)" stroke-width="1.2"/>
+
+    <text x="36" y="40" fill="#a3a3a3" font-size="11" class="mono" letter-spacing="1.4">02 // SELECTED REPOSITORIES &amp; TECHNICAL INDEX</text>
+    <text x="1164" y="40" text-anchor="end" fill="#525252" font-size="11" class="mono">GITHUB.COM/HENRYKEEP</text>
+
+    <!-- Card 01 -->
+    <g transform="translate(36, 60)">
+      <rect width="555" height="108" rx="10" fill="url(#subCard)" stroke="#262626" stroke-width="0.9"/>
+      <text x="22" y="28" fill="#a3a3a3" font-size="10.5" class="mono">NO. 01 // NATIVE ANDROID TELEMETRY</text>
+      <text x="533" y="28" text-anchor="end" fill="#e4e4e7" font-size="11" class="mono">JAVA · WIDGET</text>
+      <text x="22" y="52" fill="#ffffff" font-size="16" font-weight="600" class="sans">SS2A-Monitor ↗</text>
+      <text x="22" y="74" fill="#8a8a8e" font-size="12.5" class="sans">Sub2API Android HomeScreen Widget with adaptive dual-mode &amp; real-time telemetry.</text>
+      <text x="22" y="95" fill="#525252" font-size="10.5" class="mono">ANDROID · JAVA · REALTIME DASHBOARD · API MONITOR</text>
+    </g>
+
+    <!-- Card 02 -->
+    <g transform="translate(609, 60)">
+      <rect width="555" height="108" rx="10" fill="url(#subCard)" stroke="#262626" stroke-width="0.9"/>
+      <text x="22" y="28" fill="#a3a3a3" font-size="10.5" class="mono">NO. 02 // INTELLIGENT AUTOMATION</text>
+      <text x="533" y="28" text-anchor="end" fill="#e4e4e7" font-size="11" class="mono">PYTHON · CORE</text>
+      <text x="22" y="52" fill="#ffffff" font-size="16" font-weight="600" class="sans">qunbao ↗</text>
+      <text x="22" y="74" fill="#8a8a8e" font-size="12.5" class="sans">Python-driven automation runtime and intelligent backend service workflow.</text>
+      <text x="22" y="95" fill="#525252" font-size="10.5" class="mono">PYTHON · AUTOMATION · ASYNC RUNTIME · BOT</text>
+    </g>
+
+    <!-- Card 03 -->
+    <g transform="translate(36, 182)">
+      <rect width="555" height="108" rx="10" fill="url(#subCard)" stroke="#262626" stroke-width="0.9"/>
+      <text x="22" y="28" fill="#a3a3a3" font-size="10.5" class="mono">NO. 03 // KNOWLEDGE ARCHITECTURE</text>
+      <text x="533" y="28" text-anchor="end" fill="#e4e4e7" font-size="11" class="mono">TYPESCRIPT</text>
+      <text x="22" y="52" fill="#ffffff" font-size="16" font-weight="600" class="sans">xinliu-notes ↗</text>
+      <text x="22" y="74" fill="#8a8a8e" font-size="12.5" class="sans">Structured digital garden and minimalist knowledge workspace built with TypeScript.</text>
+      <text x="22" y="95" fill="#525252" font-size="10.5" class="mono">TYPESCRIPT · MODERN WEB · DIGITAL GARDEN</text>
+    </g>
+
+    <!-- Card 04 -->
+    <g transform="translate(609, 182)">
+      <rect width="555" height="108" rx="10" fill="url(#subCard)" stroke="#262626" stroke-width="0.9"/>
+      <text x="22" y="28" fill="#a3a3a3" font-size="10.5" class="mono">NO. 04 // AI AGENT WORKSPACE</text>
+      <text x="533" y="28" text-anchor="end" fill="#e4e4e7" font-size="11" class="mono">LLM · AGENT</text>
+      <text x="22" y="52" fill="#ffffff" font-size="16" font-weight="600" class="sans">claude-chat &amp; AI Tooling ↗</text>
+      <text x="22" y="74" fill="#8a8a8e" font-size="12.5" class="sans">Conversational LLM interfaces, local API gateways, and mobile GUI agent workflows.</text>
+      <text x="22" y="95" fill="#525252" font-size="10.5" class="mono">CLAUDE CODE · OPENAI API · FASTAPI · CLI</text>
+    </g>
+
+    <line x1="36" y1="314" x2="1164" y2="314" stroke="#262626" stroke-width="0.8"/>
+
+    <!-- 4-Column Architectural Tech Index -->
+    <g transform="translate(36, 342)">
+      <text x="0" y="0" fill="#a3a3a3" font-size="10.5" class="mono" letter-spacing="1">01 / LANGUAGES</text>
+      <text x="0" y="24" fill="#ffffff" font-size="13" font-weight="500" class="sans">Python · Java · TypeScript</text>
+      <text x="0" y="44" fill="#737373" font-size="12.5" class="sans">Kotlin · C / C++ · Shell</text>
+
+      <text x="290" y="0" fill="#a3a3a3" font-size="10.5" class="mono" letter-spacing="1">02 / AI &amp; AGENTS</text>
+      <text x="290" y="24" fill="#ffffff" font-size="13" font-weight="500" class="sans">Claude Code · LLM Gateways</text>
+      <text x="290" y="44" fill="#737373" font-size="12.5" class="sans">GUI Agents · FastAPI · MCP</text>
+
+      <text x="580" y="0" fill="#a3a3a3" font-size="10.5" class="mono" letter-spacing="1">03 / MOBILE &amp; WEB</text>
+      <text x="580" y="24" fill="#ffffff" font-size="13" font-weight="500" class="sans">Android SDK · Node.js</text>
+      <text x="580" y="44" fill="#737373" font-size="12.5" class="sans">React · Next.js · Tailwind</text>
+
+      <text x="870" y="0" fill="#a3a3a3" font-size="10.5" class="mono" letter-spacing="1">04 / EMBEDDED &amp; TOOLS</text>
+      <text x="870" y="24" fill="#ffffff" font-size="13" font-weight="500" class="sans">STM32 / MSPM0 · Linux</text>
+      <text x="870" y="44" fill="#737373" font-size="12.5" class="sans">Git · Docker · SSH · CLI</text>
+    </g>
+  </g>
+
+  <!-- ================================================================================== -->
+  <!-- ROW 4: TELEMETRY & LANGUAGE DISTRIBUTION (y = 1062, height = 220, gap = 14)        -->
+  <!-- ================================================================================== -->
+  <g transform="translate(0, 1062)">
+    <!-- Left Card (width = 593) -->
+    <g transform="translate(0, 0)">
+      <rect width="593" height="220" rx="16" fill="url(#cardGrad)" stroke="#262626" stroke-width="1"/>
+      <line x1="60" y1="1" x2="533" y2="1" stroke="url(#topEdge)" stroke-width="1.2"/>
+
+      <text x="34" y="38" fill="#a3a3a3" font-size="11" class="mono" letter-spacing="1.4">03 // GITHUB TELEMETRY</text>
+      <text x="559" y="38" text-anchor="end" fill="#525252" font-size="10.5" class="mono">@HENRYKEEP</text>
+
+      <g transform="translate(34, 58)">
+        <rect x="0" y="0" width="188" height="62" rx="8" fill="#161619" stroke="#262626" stroke-width="0.8"/>
+        <text x="16" y="23" fill="#737373" font-size="10" class="mono" letter-spacing="0.8">REPOSITORIES</text>
+        <text x="16" y="47" fill="#ffffff" font-size="20" font-weight="600" class="sans">33 <tspan fill="#737373" font-size="11" font-weight="400" class="mono">PUBLIC</tspan></text>
+
+        <rect x="200" y="0" width="188" height="62" rx="8" fill="#161619" stroke="#262626" stroke-width="0.8"/>
+        <text x="216" y="23" fill="#737373" font-size="10" class="mono" letter-spacing="0.8">PRIMARY FOCUS</text>
+        <text x="216" y="46" fill="#e4e4e7" font-size="14" font-weight="600" class="sans">AI &amp; Native Mobile</text>
+
+        <rect x="0" y="74" width="188" height="62" rx="8" fill="#161619" stroke="#262626" stroke-width="0.8"/>
+        <text x="16" y="97" fill="#737373" font-size="10" class="mono" letter-spacing="0.8">ARCHITECTURE</text>
+        <text x="16" y="120" fill="#e4e4e7" font-size="14" font-weight="600" class="sans">Full-Stack · MCU</text>
+
+        <rect x="200" y="74" width="188" height="62" rx="8" fill="#161619" stroke="#262626" stroke-width="0.8"/>
+        <text x="216" y="97" fill="#737373" font-size="10" class="mono" letter-spacing="0.8">COMMIT CADENCE</text>
+        <text x="216" y="120" fill="#ffffff" font-size="14" font-weight="600" class="mono">ACTIVE // 2026</text>
+      </g>
+
+      <g transform="translate(495, 126)">
+        <circle cx="0" cy="0" r="48" fill="none" stroke="#1f1f23" stroke-width="5"/>
+        <circle cx="0" cy="0" r="48" fill="none" stroke="#ffffff" stroke-width="5" stroke-dasharray="265 302" stroke-linecap="round" transform="rotate(-90)"/>
+        <text x="0" y="-2" text-anchor="middle" fill="#ffffff" font-size="24" font-weight="600" class="serif">S+</text>
+        <text x="0" y="16" text-anchor="middle" fill="#737373" font-size="9.5" class="mono" letter-spacing="1">INDEX</text>
+      </g>
+    </g>
+
+    <!-- Right Card (x = 607, width = 593) -->
+    <g transform="translate(607, 0)">
+      <rect width="593" height="220" rx="16" fill="url(#cardGrad)" stroke="#262626" stroke-width="1"/>
+      <line x1="60" y1="1" x2="533" y2="1" stroke="url(#topEdge)" stroke-width="1.2"/>
+
+      <text x="34" y="38" fill="#a3a3a3" font-size="11" class="mono" letter-spacing="1.4">04 // LANGUAGE TELEMETRY &amp; DISTRIBUTION</text>
+      <text x="559" y="38" text-anchor="end" fill="#525252" font-size="10.5" class="mono">MONOCHROME SPECTRUM</text>
+
+      <g transform="translate(34, 58)">
+        <rect x="0" y="0" width="195" height="10" rx="3" fill="#ffffff"/>
+        <rect x="199" y="0" width="145" height="10" rx="3" fill="#a1a1aa"/>
+        <rect x="348" y="0" width="110" height="10" rx="3" fill="#52525b"/>
+        <rect x="462" y="0" width="63" height="10" rx="3" fill="#27272a"/>
+      </g>
+
+      <g transform="translate(34, 92)">
+        <rect x="0" y="0" width="252" height="46" rx="8" fill="#161619" stroke="#262626" stroke-width="0.8"/>
+        <circle cx="18" cy="23" r="4.5" fill="#ffffff"/>
+        <text x="32" y="20" fill="#ffffff" font-size="12.5" font-weight="600" class="sans">Python</text>
+        <text x="32" y="36" fill="#737373" font-size="10.5" class="mono">AI Agents · FastAPI</text>
+        <text x="236" y="27" text-anchor="end" fill="#e4e4e7" font-size="12" font-weight="600" class="mono">37.2%</text>
+
+        <rect x="273" y="0" width="252" height="46" rx="8" fill="#161619" stroke="#262626" stroke-width="0.8"/>
+        <circle cx="291" cy="23" r="4.5" fill="#a1a1aa"/>
+        <text x="305" y="20" fill="#ffffff" font-size="12.5" font-weight="600" class="sans">Java / Kotlin</text>
+        <text x="305" y="36" fill="#737373" font-size="10.5" class="mono">Android · Widgets</text>
+        <text x="509" y="27" text-anchor="end" fill="#e4e4e7" font-size="12" font-weight="600" class="mono">27.8%</text>
+
+        <rect x="0" y="58" width="252" height="46" rx="8" fill="#161619" stroke="#262626" stroke-width="0.8"/>
+        <circle cx="18" cy="81" r="4.5" fill="#52525b"/>
+        <text x="32" y="78" fill="#ffffff" font-size="12.5" font-weight="600" class="sans">TypeScript</text>
+        <text x="32" y="94" fill="#737373" font-size="10.5" class="mono">Web · Next.js · CLI</text>
+        <text x="236" y="85" text-anchor="end" fill="#e4e4e7" font-size="12" font-weight="600" class="mono">21.5%</text>
+
+        <rect x="273" y="58" width="252" height="46" rx="8" fill="#161619" stroke="#262626" stroke-width="0.8"/>
+        <circle cx="291" cy="81" r="4.5" fill="#27272a" stroke="#737373" stroke-width="1"/>
+        <text x="305" y="78" fill="#ffffff" font-size="12.5" font-weight="600" class="sans">C / C++ &amp; Shell</text>
+        <text x="305" y="94" fill="#737373" font-size="10.5" class="mono">Embedded · Linux</text>
+        <text x="509" y="85" text-anchor="end" fill="#e4e4e7" font-size="12" font-weight="600" class="mono">13.5%</text>
+      </g>
+    </g>
+  </g>
+</svg>
